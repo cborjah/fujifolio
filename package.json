@@ -15,7 +15,14 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "prettier": "2.8.7"
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "2.8.7",
+    "typescript": "^5.0.4"
   },
   "keywords": [
     "gatsby"
@@ -28,7 +35,9 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "tsc": "tsc",
+    "lint": "eslint src --ext"
   },
   "repository": {
     "type": "git",
