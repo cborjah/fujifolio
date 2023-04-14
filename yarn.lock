@@ -3014,9 +3014,9 @@ __metadata:
   linkType: hard
 
 "@types/lodash@npm:^4.14.92":
-  version: 4.14.192
-  resolution: "@types/lodash@npm:4.14.192"
-  checksum: b04e16a4ba1d3a9be73c806214d6ad3ac630afd7bd1222bb5e4ac1d90bbfef1a2e0d6aac3c8733b23bcdfa6f3ebee5817e66df465ada132c2eedc55d31bc45c3
+  version: 4.14.194
+  resolution: "@types/lodash@npm:4.14.194"
+  checksum: 64473e6735e51c3f8be18ef907a086f5a9c967117270c573d2b8fdc012b067c4de016a7b030abd6170aa5370f5ecbada19e646c82d9feb7403a080d53cfc86f3
   languageName: node
   linkType: hard
 
@@ -5757,9 +5757,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.284":
-  version: 1.4.362
-  resolution: "electron-to-chromium@npm:1.4.362"
-  checksum: 0f2e91b6b988bcd987edf67011d37c59a7fe0dda49f1db1cb1a73ea15c894834e1ad5c755d0351611a36e54e065a26b459ccc8e7972110ef68b1db63d02a12ea
+  version: 1.4.364
+  resolution: "electron-to-chromium@npm:1.4.364"
+  checksum: 875aedbba338cd907ae8ee984d8dada28264c30b3e61108df77648191e7f17d7c187fd5b1a716f22b3596609c274326edcd17d7cf649b191b8a466ccad8e17c0
   languageName: node
   linkType: hard
 
@@ -6153,14 +6153,14 @@ __metadata:
   linkType: hard
 
 "eslint-module-utils@npm:^2.7.4":
-  version: 2.7.4
-  resolution: "eslint-module-utils@npm:2.7.4"
+  version: 2.8.0
+  resolution: "eslint-module-utils@npm:2.8.0"
   dependencies:
     debug: "npm:^3.2.7"
   peerDependenciesMeta:
     eslint:
       optional: true
-  checksum: 3acd6a8988830c11b4e2f900eb5a9a59143728dd7b914e9567316d964bd4f14355842f76b2ddf148ffaeba0c4a65f49338572a5a1e419e00eac7d2064cb7a559
+  checksum: c4820cf0d710cece498aaae98a15d339e09b04804d478a6af598a6962baaac31db13ce9f025a64edb8f607c20a07f895dacd2e1b80b833b7f3ad38d66d269c29
   languageName: node
   linkType: hard
 
@@ -7082,6 +7082,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fujifolio@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "fujifolio@workspace:."
+  dependencies:
+    "@emotion/react": "npm:11.10.6"
+    "@typescript-eslint/eslint-plugin": "npm:5.58.0"
+    "@typescript-eslint/parser": "npm:5.58.0"
+    eslint: "npm:8.38.0"
+    eslint-config-prettier: "npm:8.8.0"
+    eslint-plugin-prettier: "npm:4.2.1"
+    eslint-plugin-react: "npm:7.32.2"
+    gatsby: "npm:5.8.1"
+    gatsby-plugin-emotion: "npm:8.8.0"
+    gatsby-plugin-image: "npm:3.8.0"
+    gatsby-plugin-manifest: "npm:5.8.0"
+    gatsby-plugin-sharp: "npm:5.8.1"
+    gatsby-source-filesystem: "npm:5.8.0"
+    gatsby-transformer-sharp: "npm:5.8.0"
+    prettier: "npm:2.8.7"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    typescript: "npm:5.0.4"
+  languageName: unknown
+  linkType: soft
+
 "function-bind@npm:^1.1.1":
   version: 1.1.1
   resolution: "function-bind@npm:1.1.1"
@@ -7457,31 +7482,6 @@ __metadata:
   checksum: 7c88b917cdb7bc04de50736e2a5532746c06ea6ee3991ed7554aafb3ae3759ea59eeed5d79628872cd349f712c53072a30fa4b0611f7e71cb24a516fefce64de
   languageName: node
   linkType: hard
-
-"gatsby-starter-default@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "gatsby-starter-default@workspace:."
-  dependencies:
-    "@emotion/react": "npm:11.10.6"
-    "@typescript-eslint/eslint-plugin": "npm:5.58.0"
-    "@typescript-eslint/parser": "npm:5.58.0"
-    eslint: "npm:8.38.0"
-    eslint-config-prettier: "npm:8.8.0"
-    eslint-plugin-prettier: "npm:4.2.1"
-    eslint-plugin-react: "npm:7.32.2"
-    gatsby: "npm:5.8.1"
-    gatsby-plugin-emotion: "npm:8.8.0"
-    gatsby-plugin-image: "npm:3.8.0"
-    gatsby-plugin-manifest: "npm:5.8.0"
-    gatsby-plugin-sharp: "npm:5.8.1"
-    gatsby-source-filesystem: "npm:5.8.0"
-    gatsby-transformer-sharp: "npm:5.8.0"
-    prettier: "npm:2.8.7"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-    typescript: "npm:5.0.4"
-  languageName: unknown
-  linkType: soft
 
 "gatsby-telemetry@npm:^4.8.0":
   version: 4.8.0
@@ -8003,11 +8003,11 @@ __metadata:
   linkType: hard
 
 "graphql-http@npm:^1.13.0":
-  version: 1.17.1
-  resolution: "graphql-http@npm:1.17.1"
+  version: 1.18.0
+  resolution: "graphql-http@npm:1.18.0"
   peerDependencies:
     graphql: ">=0.11 <=16"
-  checksum: 2becb7fdf645e1bdc8a6ff30d51343f0e7c81c11a951e088c7476effd92b56a6e7ac40342ba905f05bb2019da7a9882e6a59a67e7990909daef6159e9b3cf07e
+  checksum: 98c49b133ee9eb38a84bfcd2e9e355bbec7cd45a704ce34e1d54ecd17fedd76e822f741791c1655e17443b300e6b71a955b8b691b779667e5e1b237d04c70840
   languageName: node
   linkType: hard
 
@@ -8543,7 +8543,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-core-module@npm:^2.11.0, is-core-module@npm:^2.9.0":
+"is-core-module@npm:^2.11.0, is-core-module@npm:^2.12.0, is-core-module@npm:^2.9.0":
   version: 2.12.0
   resolution: "is-core-module@npm:2.12.0"
   dependencies:
@@ -11826,15 +11826,15 @@ __metadata:
   linkType: hard
 
 "resolve@npm:^1.10.0, resolve@npm:^1.14.2, resolve@npm:^1.19.0, resolve@npm:^1.22.1":
-  version: 1.22.2
-  resolution: "resolve@npm:1.22.2"
+  version: 1.22.3
+  resolution: "resolve@npm:1.22.3"
   dependencies:
-    is-core-module: "npm:^2.11.0"
+    is-core-module: "npm:^2.12.0"
     path-parse: "npm:^1.0.7"
     supports-preserve-symlinks-flag: "npm:^1.0.0"
   bin:
     resolve: bin/resolve
-  checksum: fe7adbedd826521300326e5c3e55784c369e8d52a16f542c3735c553a98dd26ba7fc91bc859a3cbe80cb1c83e5fa2d93aa2c36bdbe1584fff8c7feebc765cd1e
+  checksum: bf0ce0162ee1b5a2dfe29e982b67fb0867911972ffba9a6903bb2c0c11e6c8eb7db7de5344645f84df7f9ba2a19438d373ddddf3a3125ececba719fccd40dd18
   languageName: node
   linkType: hard
 
@@ -11852,15 +11852,15 @@ __metadata:
   linkType: hard
 
 "resolve@patch:resolve@npm%3A^1.10.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.14.2#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.19.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.1#optional!builtin<compat/resolve>":
-  version: 1.22.2
-  resolution: "resolve@patch:resolve@npm%3A1.22.2#optional!builtin<compat/resolve>::version=1.22.2&hash=c3c19d"
+  version: 1.22.3
+  resolution: "resolve@patch:resolve@npm%3A1.22.3#optional!builtin<compat/resolve>::version=1.22.3&hash=c3c19d"
   dependencies:
-    is-core-module: "npm:^2.11.0"
+    is-core-module: "npm:^2.12.0"
     path-parse: "npm:^1.0.7"
     supports-preserve-symlinks-flag: "npm:^1.0.0"
   bin:
     resolve: bin/resolve
-  checksum: 58838d3b80cac9bc3386d09c058e91c6169659ba8d42a01698e149bd27a7e3c1557c46e1d0e2bde1b426731ee46bf17d3a8e750c2ae78c093129891b39886c20
+  checksum: 9b982fd1fdbcca23f58d4d97df35bf1182eaccad96df6d8bbc4e9006616c382a10d7617e039a540cc86291e5247ddbb7cda9cceb1fd35688b03b03864b5d4360
   languageName: node
   linkType: hard
 
