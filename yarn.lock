@@ -7260,7 +7260,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-emotion@npm:^8.8.0":
+"gatsby-plugin-emotion@npm:8.8.0":
   version: 8.8.0
   resolution: "gatsby-plugin-emotion@npm:8.8.0"
   dependencies:
@@ -7470,7 +7470,7 @@ __metadata:
     eslint-plugin-prettier: "npm:4.2.1"
     eslint-plugin-react: "npm:7.32.2"
     gatsby: "npm:5.8.1"
-    gatsby-plugin-emotion: "npm:^8.8.0"
+    gatsby-plugin-emotion: "npm:8.8.0"
     gatsby-plugin-image: "npm:3.8.0"
     gatsby-plugin-manifest: "npm:5.8.0"
     gatsby-plugin-sharp: "npm:5.8.1"
