@@ -73,3 +73,5 @@ public
 # Yarn Integrity file
 .yarn-integrity
 
+# TypeScript Output
+dist/
