@@ -23,6 +23,6 @@
 		"linebreak-style": ["error", "unix"],
 		"quotes": ["error", "double"],
 		"semi": ["error", "always"],
-		"react/no-unescaped-entities": [0]
+		"react/no-unescaped-entities": [0, {}]
 	}
 }
