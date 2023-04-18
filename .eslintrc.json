@@ -19,6 +19,7 @@
 		"sourceType": "module"
 	},
 	"plugins": ["react", "@typescript-eslint", "@emotion"],
+	"ignorePatterns": ["dist"],
 	"rules": {
 		"indent": ["error", "tab"],
 		"linebreak-style": ["error", "unix"],
