@@ -75,3 +75,4 @@ public
 
 # TypeScript Output
 dist/
+tsconfig.tsbuildinfo
