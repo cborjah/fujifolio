@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Global } from "@emotion/react";
+import { Global, css } from "@emotion/react";
 
 import Header from "./header";
 import ResetStyles from "../util/reset";
@@ -24,20 +24,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 		<>
 			<Global styles={ResetStyles} />
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-			<div
-				style={{
-					margin: `0 auto`,
-					maxWidth: `var(--size-content)`,
-					padding: `var(--size-gutter)`,
-				}}
-			>
+			<div css={divStyles}>
 				<main>{children}</main>
-				<footer
-					style={{
-						marginTop: `var(--space-5)`,
-						fontSize: `var(--font-sm)`,
-					}}
-				>
+				<footer css={footerStyles}>
 					© {new Date().getFullYear()} &middot; Built with
 					{` `}
 					<a href="https://www.gatsbyjs.com">Gatsby</a>
@@ -46,5 +35,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 		</>
 	);
 };
+
+const divStyles = css({
+	margin: `0 auto`,
+	maxWidth: `var(--size-content)`,
+	padding: `var(--size-gutter)`,
+});
+
+const footerStyles = css({
+	marginTop: `var(--space-5)`,
+	fontSize: `var(--font-sm)`,
+	backgroundColor: "red",
+});
 
 export default Layout;
