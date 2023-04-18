@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 
-const ResetStyles = css`
+const GlobalStyles = css`
 	:root {
 		--border-radius: 4px;
 		--color-text: #333;
@@ -227,4 +227,4 @@ const ResetStyles = css`
 	}
 `;
 
-export default ResetStyles;
+export default GlobalStyles;

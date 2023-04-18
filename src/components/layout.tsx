@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Global, css } from "@emotion/react";
 
 import Header from "./header";
-import ResetStyles from "../util/reset";
+import GlobalStyles from "../util/globalStyles";
 
 type LayoutProps = {
 	children: React.ReactElement[];
@@ -22,7 +22,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 	return (
 		<>
-			<Global styles={ResetStyles} />
+			<Global styles={GlobalStyles} />
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<div css={divStyles}>
 				<main>{children}</main>
@@ -45,7 +45,6 @@ const divStyles = css({
 const footerStyles = css({
 	marginTop: `var(--space-5)`,
 	fontSize: `var(--font-sm)`,
-	backgroundColor: "red",
 });
 
 export default Layout;
