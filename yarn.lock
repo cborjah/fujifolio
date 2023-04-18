@@ -1536,6 +1536,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/eslint-plugin@npm:11.10.0":
+  version: 11.10.0
+  resolution: "@emotion/eslint-plugin@npm:11.10.0"
+  peerDependencies:
+    eslint: 6 || 7 || 8
+  checksum: 68fcfd5a0f66aee68edba748982c9fd88d60f4220d1e37996c7c00b56809842fba1a4295cc9e7aaea0fc78a7dc925cb4f8c02c33b92fbfd341f138d483df508d
+  languageName: node
+  linkType: hard
+
 "@emotion/hash@npm:^0.9.0":
   version: 0.9.0
   resolution: "@emotion/hash@npm:0.9.0"
@@ -7086,6 +7095,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "fujifolio@workspace:."
   dependencies:
+    "@emotion/eslint-plugin": "npm:11.10.0"
     "@emotion/react": "npm:11.10.6"
     "@typescript-eslint/eslint-plugin": "npm:5.58.0"
     "@typescript-eslint/parser": "npm:5.58.0"
