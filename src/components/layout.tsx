@@ -39,12 +39,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 const divStyles = css({
 	margin: `0 auto`,
 	maxWidth: `var(--size-content)`,
-	padding: `var(--size-gutter)`,
+	padding: `var(--size-gutter)`
 });
 
 const footerStyles = css({
 	marginTop: `var(--space-5)`,
-	fontSize: `var(--font-sm)`,
+	fontSize: `var(--font-sm)`
 });
 
 export default Layout;
