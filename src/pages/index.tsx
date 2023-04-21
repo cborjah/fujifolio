@@ -106,12 +106,14 @@ const IndexPage = () => (
 				</li>
 			))}
 		</ul>
-		{/* {moreLinks.map((link, i) => (
-			<React.Fragment key={link.url}>
-				<a href={`${link.url}${utmParameters}`}>{link.text}</a>
-				{i !== moreLinks.length - 1 && <> · </>}
-			</React.Fragment>
-		))} */}
+		<React.Fragment>
+			{moreLinks.map((link, i) => (
+				<React.Fragment key={link.url}>
+					<a href={`${link.url}${utmParameters}`}>{link.text}</a>
+					{i !== moreLinks.length - 1 && <> · </>}
+				</React.Fragment>
+			))}
+		</React.Fragment>
 	</Layout>
 );
 
@@ -137,7 +139,19 @@ const styles = {
 		marginTop: `var(--size-gap)`
 	}),
 	listItem: css({
-		margin: 0
+		margin: 0,
+		"&::marker": {
+			color: "#e95800"
+		},
+		"&:nth-child(2)::marker": {
+			color: "#159bf3"
+		},
+		"&:nth-child(3)::marker": {
+			color: "#8eb814"
+		},
+		"&:nth-child(4)::marker": {
+			color: "#663399"
+		}
 	}),
 	listItemLink: css({
 		color: `var(--color-primary)`,
