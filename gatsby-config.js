@@ -8,6 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+	graphqlTypegen: true,
 	siteMetadata: {
 		title: `FujiFolio`,
 		description: `Documenting my journey into photography.`,
