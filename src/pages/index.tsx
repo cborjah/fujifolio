@@ -1,37 +1,10 @@
 import * as React from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { Link, useStaticQuery, graphql, PageProps } from "gatsby";
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import { css } from "@emotion/react";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-
-const links = [
-	{
-		text: "Tutorial",
-		url: "https://www.gatsbyjs.com/docs/tutorial",
-		description:
-			"A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site."
-	},
-	{
-		text: "Examples",
-		url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-		description:
-			"A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites."
-	},
-	{
-		text: "Plugin Library",
-		url: "https://www.gatsbyjs.com/plugins",
-		description:
-			"Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community."
-	},
-	{
-		text: "Build and Host",
-		url: "https://www.gatsbyjs.com/cloud",
-		description:
-			"Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!"
-	}
-];
 
 const samplePageLinks = [
 	{
@@ -46,76 +19,64 @@ const samplePageLinks = [
 	{ text: "Deferred Static Generation", url: "using-dsg" }
 ];
 
-const moreLinks = [
-	{ text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-	{
-		text: "Documentation",
-		url: "https://gatsbyjs.com/docs/"
-	},
-	{
-		text: "Starters",
-		url: "https://gatsbyjs.com/starters/"
-	},
-	{
-		text: "Showcase",
-		url: "https://gatsbyjs.com/showcase/"
-	},
-	{
-		text: "Contributing",
-		url: "https://www.gatsbyjs.com/contributing/"
-	},
-	{ text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" }
-];
+const IndexPage = () => {
+	const data: Queries.IndexPageQuery = useStaticQuery(graphql`
+		query IndexPage {
+			allFile(filter: { extension: { eq: "jpg" } }) {
+				nodes {
+					id
+					childImageSharp {
+						gatsbyImageData
+					}
+				}
+			}
+		}
+	`);
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`;
-
-const IndexPage = () => (
-	<Layout>
-		<div css={styles.textCenter}>
-			<StaticImage
-				css={styles.staticImage}
-				src="../images/example.png"
-				loading="eager"
-				width={64}
-				quality={95}
-				formats={["auto", "webp", "avif"]}
-				alt=""
-			/>
-			<h1>
-				Welcome to <b>Gatsby!</b>
-			</h1>
-			<p css={styles.intro}>
-				<b>Example pages:</b>{" "}
-				{samplePageLinks.map((link, i) => (
-					<React.Fragment key={link.url}>
-						<Link to={link.url}>{link.text}</Link>
-						{i !== samplePageLinks.length - 1 && <> · </>}
-					</React.Fragment>
-				))}
-				<br />
-				Edit <code>src/pages/index.js</code> to update this page.
-			</p>
-		</div>
-		<ul css={styles.list}>
-			{links.map(link => (
-				<li key={link.url} css={styles.listItem}>
-					<a css={styles.listItemLink} href={`${link.url}${utmParameters}`}>
-						{link.text} ↗
-					</a>
-					<p css={styles.listItemDescription}>{link.description}</p>
-				</li>
-			))}
-		</ul>
-		<React.Fragment>
-			{moreLinks.map((link, i) => (
-				<React.Fragment key={link.url}>
-					<a href={`${link.url}${utmParameters}`}>{link.text}</a>
-					{i !== moreLinks.length - 1 && <> · </>}
-				</React.Fragment>
-			))}
-		</React.Fragment>
-	</Layout>
-);
+	return (
+		<Layout>
+			<div css={styles.textCenter}>
+				<StaticImage
+					css={styles.staticImage}
+					src="../images/example.png"
+					loading="eager"
+					width={64}
+					quality={95}
+					formats={["auto", "webp", "avif"]}
+					alt=""
+				/>
+				<h1>
+					Welcome to <b>Gatsby!</b>
+				</h1>
+				<p css={styles.intro}>
+					<b>Example pages:</b>{" "}
+					{samplePageLinks.map((link, i) => (
+						<React.Fragment key={link.url}>
+							<Link to={link.url}>{link.text}</Link>
+							{i !== samplePageLinks.length - 1 && <> · </>}
+						</React.Fragment>
+					))}
+					<br />
+					Edit <code>src/pages/index.js</code> to update this page.
+				</p>
+			</div>
+			<ul css={styles.list}>
+				{data &&
+					data.allFile.nodes.map(
+						node =>
+							node.childImageSharp && (
+								<div key={node.id} style={styles.photoContainer}>
+									<GatsbyImage
+										image={node.childImageSharp.gatsbyImageData}
+										alt=""
+									/>
+								</div>
+							)
+					)}
+			</ul>
+		</Layout>
+	);
+};
 
 const styles = {
 	textCenter: css({
@@ -164,7 +125,11 @@ const styles = {
 	}),
 	staticImage: css({
 		marginBottom: `var(--space-3)`
-	})
+	}),
+	photoContainer: {
+		height: 500,
+		width: 500
+	}
 };
 
 /**
